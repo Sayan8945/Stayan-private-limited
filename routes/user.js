@@ -6,7 +6,7 @@ const passport = require("passport");
 const multer = require("multer");
 const { storage } = require("../cloudConfig");
 const upload = multer({ storage });
-const { isLoggedIn, saveRedirectUrl } = require("../middleware");
+const { isLoggedIn, saveRedirectUrl } = require("../addMidwares");
 const { flushCompileCache } = require("module");
 const UserController = require("../controllers/user");
 

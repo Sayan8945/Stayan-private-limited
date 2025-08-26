@@ -7,7 +7,7 @@ const {
   isLoggedIn,
   validateReview,
   isReviewAuthor,
-} = require("../addMidwares.js");
+} = require("../utills/addMidwares.js");
 
 const reviewController = require("../controllers/review.js");
 

@@ -1,5 +1,5 @@
 const Listing = require("../Models/listing");
-// const { googleMapKey, geocodeAddress} = require("../map");
+const { googleMapKey, geocodeAddress} = require("../map");
 
 
 module.exports.index = async (req, res) => {
@@ -40,7 +40,7 @@ module.exports.showListing = async (req, res) => {
     req.flash("error", "Listing doesn't exist!");
     res.redirect("/listings");
   } else {
-    res.render("listings/show", { listing, googleMapKey, location});
+    res.render("listings/show", { listing, location, googleMapKey});
     // console.log(res.locals);
   }
 };

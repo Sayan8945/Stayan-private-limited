@@ -31,10 +31,12 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.engine('ejs', engine);
 
 let MongoDbUrl = process.env.MONGO_DBLINK ;
-main(() => console.log("connected with wanderlust")).catch(err => console.log(err));
-async function main() {
-  await mongoose.connect(MongoDbUrl);
-}
+mongoose.connect(MongoDbUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("✅ MongoDB connected"))
+.catch(err => console.error("❌ MongoDB connection error:", err));
 
 //mongo store
 const store = MongoStore.create({

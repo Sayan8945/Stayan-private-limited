@@ -1,5 +1,5 @@
 const Listing = require("../Models/listing");
-const { googleMapKey, geocodeAddress} = require("../public/javascript/map");
+const { googleMapKey, geocodeAddress} = require("../map");
 
 
 module.exports.index = async (req, res) => {

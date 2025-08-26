@@ -15,7 +15,7 @@ const listingSchema = new Schema({
     image : {
         url : {
             type : String,
-            // default: "https://vietnamtour.in/wp-content/uploads/VNIN_backpacking-hiking-sapa-vietnam-main-image-min.jpg",
+            default: "https://vietnamtour.in/wp-content/uploads/VNIN_backpacking-hiking-sapa-vietnam-main-image-min.jpg",
             // set: (v) => v ===""? "https://vietnamtour.in/wp-content/uploads/VNIN_backpacking-hiking-sapa-vietnam-main-image-min.jpg" : v,   //ternar operator
         },
         filename : {

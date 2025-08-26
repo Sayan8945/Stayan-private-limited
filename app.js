@@ -30,17 +30,6 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "/public")));
 app.engine('ejs', engine);
 
-const axios = require("axios");
-const https = require("https");
-
-const agent = new https.Agent({
-  secureProtocol: "TLSv1_2_method"
-});
-
-axios.get("https://example.com", { httpsAgent: agent })
-  .then(res => console.log(res.data))
-  .catch(err => console.error("Error:", err));
-
 let MongoDbUrl = process.env.MONGO_DBLINK ;
 main(() => console.log("connected with wanderlust")).catch(err => console.log(err));
 async function main() {
